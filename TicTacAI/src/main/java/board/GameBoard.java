@@ -65,4 +65,14 @@ public class GameBoard {
 	return this.board;
     }
     
+    public Boolean equals(GameBoard otherBoard) {
+	for (int i=0;i<this.board.length;i++) {
+	    for (int j=0;j<this.board[i].length;j++) {
+		if (!this.board[i][j].equals(otherBoard.getBoard()[i][j])) {
+		    return false;
+		}
+	    }
+	}
+	return true;
+    }
 }

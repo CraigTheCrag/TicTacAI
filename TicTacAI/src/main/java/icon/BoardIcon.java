@@ -25,4 +25,8 @@ public enum BoardIcon {
     public String getCharacter() {
 	return this.character;
     }
+    
+    public Boolean equals(BoardIcon otherIcon) {
+	return (this.name.equals(otherIcon.getName()) & this.character.equals(otherIcon.getCharacter()));
+    }
 }
